@@ -1,0 +1,85 @@
+:root{
+    /* Topical Sunset Color Palette */
+    --color-1: #FF8C42; /*Sunset Orange*/
+    --color-2: #FFDFA0; /*Golden Sand*/
+    --color-3: #2A9D8F; /*Ocean Blue*/
+    --color-4: #264653; /*Deep Sea Navy*/
+    --color-5: #FFF8F0; /*Coconut White*/
+}
+
+
+
+body {
+    background-color: var(--color-5);
+}
+
+/* header styling */
+header {
+    background-image: url('../images/landing_header.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 200px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 2rem;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* testing background */
+    background-color(0,0,0,0.3); 
+    z-index: 0;
+}
+
+header h1, header nav {
+    position: relative;
+    color: var(--color-5);
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: var(--color-5);
+    font-size: 1.8rem;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    line-height: 1.2;
+    white-space: normal;
+    word-break: break-word;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar a{
+    color: var(--color-5);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* end header style */
+
+/* Main Content Styling */
+
+section {
+    width: auto;
+}
+
+#making_memories {
+    
+}
