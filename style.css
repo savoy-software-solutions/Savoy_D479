@@ -72,43 +72,106 @@ h1 {
     font-weight: 500;
 }
 
-/* end header style */
-
 /* CTA Card Container Sections */
 
-.cta_container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
-    margin-left: 4rem;
+.card_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+    width: 100%;
+    padding-right: 4rem;
 }
 
 .cta_container h2 {
     color: var(--color-4);
-    font-weight: 600;
     font-size: 2.5rem;
-    text-align: center;
+    font-weight: 600;
+    margin-left: 4rem;
 }
 
-.cta_container ul {
+.cta_container ul{
     list-style: none;
     display: flex;
     gap: 2rem;
     margin: 0;
     padding: 0;
 }
+
 .cta_menu_btn {
     background-color: var(--color-3);
     color: var(--color-5);
     border: none;
     border-radius: 20px;
     padding: 0.5rem 1rem;
-    font-size: 1rem;
+    cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 .cta_menu_btn.active {
     background-color: var(--color-1);
     color: var(--color-4);
+}
+
+/* Card Grid */
+.card_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+    width: 100%;
+    padding-right: 4rem;
+}
+
+
+/* Individual Cards */
+.card {
+    background-color: var(--color-5);
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8ps;
+}
+
+.card h3 {
+    color: var(--color-4);
+    margin: 1 rem 0 0 0.5rem;
+    font-size: 1.2rem;
+}
+
+.card p {
+    color: #444;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Adjustments */
+@media (max0width: 768px) {
+    .cta_container {
+        align-items: center;
+        margin-left: 0;
+    }
+
+    .cta_container ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .card_container {
+        padding-right: 0;
+    }
 }

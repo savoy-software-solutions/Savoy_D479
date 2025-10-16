@@ -25,17 +25,47 @@
     <!-- CTA's for things to do on island -->
     <section class="cta_container">
         <h2>Where memories are made</h2>
-        <ul>
-            <li><button class="cta_menu_btn">All</button></li>
-            <li><button class="cta_menu_btn">Food & Drinks</button></li>
-            <li><button class="cta_menu_btn">Nature</button></li>
-            <li><button class="cta_menu_btn">Culture</button></li>
-            <li><button class="cta_menu_btn">Family-Fun</button></li>
-            <li><button class="cta_menu_btn">Night Life</button></li>
+
+        <!-- Filter buttons to sort through categories -->
+        <ul class="cta_menu">
+            <li><button class="cta_menu_btn" data-category="all">All</button></li>
+            <li><button class="cta_menu_btn" data-category="food">Food & Drinks</button></li>
+            <li><button class="cta_menu_btn" data-category="nature">Nature</button></li>
+            <li><button class="cta_menu_btn" data-category="culture">Culture</button></li>
+            <li><button class="cta_menu_btn" data-category="family">Family-Fun</button></li>
+            <li><button class="cta_menu_btn" data-category="nightlife">Night Life</button></li>
         </ul>
+
+        <!-- Cards section -->
         <div class="card_container">
-            <div class="card_description">
-                <!-- name of the card -->
+            <div class="card" data-category="food">
+                <img src="../images/local_restaurant_1.jpg" alt="Restaurant">
+                <h3>Local Restaurant</h3>
+                <p>Enjoy local seafood with ocean views.</p>
+            </div>
+
+            <div class="card" data-category="nature">
+                <img src="../images/volcano.jpg" alt="Volcano">
+                <h3>Taniti Volcano Tours</h3>
+                <p>Explore the beauty of Taniti's largest volcano.</p>
+            </div>
+
+            <div class="card" data-category="culture">
+                <img src="../images/local_town.jpg" alt="Local Town">
+                <h3>Local Town Experience</h3>
+                <p>Spend the day walking local towns</p>
+            </div>
+
+            <div class="card" data-category="nightlife">
+                <img src="../images/night_life.jpg" alt="Night Club">
+                <h3>Night Club</h3>
+                <p>Enjoy a vibrant night out</p>
+            </div>
+
+            <div class="card" data-category="family">
+                <img src="../images/rainforest_tour.jpg" alt="Rainforest Tour">
+                <h3>Rainforest Tours</h3>
+                <p>Adventure through the rainforest of Taniti</p>
             </div>
         </div>
     </section>
