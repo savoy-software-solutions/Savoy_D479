@@ -32,3 +32,21 @@ faqItems.forEach(item => {
         item.classList.toggle('active');
     });
 });
+
+// Back to Top Button
+const back_to_top = document.getElementById('back_to_top');
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+        back_to_top.style.display = 'flex';
+    } else {
+        back_to_top.style.display = 'none';
+    }
+});
+
+back_to_top.addEventListener('click', () => {
+    window.scrollTo({
+        top:0,
+        behavior: 'smooth'
+    });
+});
