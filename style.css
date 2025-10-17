@@ -105,36 +105,54 @@ h1 {
 }
 
 /* Card Grid */
-.card_container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-    margin-left: 4rem;
+.scroll_wrapper {
     width: 100%;
-    padding-right: 4rem;
-    justify-items: cetner;
-    align-items: start;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 1rem;
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-1) transparent;
+}
+
+.scroll_wrapper::-webkit-scrollbar {
+    height: 8px;
+}
+
+.scroll_wrapper::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.scroll_wrapper::-webkit-scrollbar-thumb {
+    background-color: var(--color-1);
+    border-radius: 10px;
+}
+
+.card_container {
+    display: flex;
+    gap: 1.5rem;
+    padding: 1rem 2rem;
+    flex-wrap: nowrap;
+    scroll-behavior: smooth;
 }
 
 
 /* Individual Cards */
 .card {
-    background-color: var(--color-5);
-    border-radius: 12px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    flex: 0 0 280px;
+    height: 350px;
+    background-color: var(--color-3);
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0,1);
     overflow: hidden;
-    padding: 1rem;
-    width: 100%;
-    max-width: 300px;
-    min-height: 350px;
+    display: flex;
+    flex-direction: column;
     text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
 .card img {
     width: 100%;
-    height: 180px;
+    height: 200px;
     object-fit: cover;
     border-radius: 8ps;
 }
@@ -153,7 +171,6 @@ h1 {
 
 .card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
 
 /* Responsive Adjustments */
