@@ -15,10 +15,10 @@ body {
 
 /* header styling */
 header {
-    background-image: url('../images/landing_header.jpg');
+    /* background-image: url('../images/landing_header.jpg');
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; */
     height: 200px;
     position: relative;
     display: flex;
@@ -26,6 +26,17 @@ header {
     align-items: flex-start;
     padding: 1rem 2rem;
     z-index: 1;
+}
+
+#landing_header{
+    background-image: url('../images/landing_header.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#support_page {
+    background-color: var(--color-2);
 }
 
 header::before {
@@ -211,11 +222,18 @@ header h1 a:focus {
 .banner {
     width: 100%;
     height: 200px;
-    background-image: url('images/tropical_beach.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     margin: 3rem 0;
+}
+
+.banner_home {
+    background-image: url('../images/tropical_beach.jpg');
+}
+
+.banner_around {
+    background-image: url('../images/transportation.jpg');
 }
 
 /* FAQ Section Styling */
