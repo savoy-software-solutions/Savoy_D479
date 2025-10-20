@@ -15,10 +15,6 @@ body {
 
 /* header styling */
 header {
-    /* background-image: url('../images/landing_header.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat; */
     height: 200px;
     position: relative;
     display: flex;
@@ -35,7 +31,7 @@ header {
     background-repeat: no-repeat;
 }
 
-#support_page {
+.support_page {
     background-color: var(--color-2);
 }
 
@@ -234,6 +230,10 @@ header h1 a:focus {
 
 .banner_around {
     background-image: url('../images/transportation.jpg');
+}
+
+.banner-places {
+    background-image: url();
 }
 
 /* FAQ Section Styling */
