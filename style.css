@@ -317,3 +317,69 @@ header h1 a:focus {
     background-color: var(--color-2);
     transform: translateY(-3px);
 }
+
+/* deals&offers section */
+
+.deals_section {
+    padding: 3rem 2 rem;
+    background-color: var(--color-2);
+    color: var(--color-5);
+}
+
+.deals_section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;;
+}
+
+.deals_container {
+    display: flex;
+    gap: 1.5rem;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding-bottom: 1 rem;
+}
+
+.deals_containr::-webkit-scrollbar {
+    display: none;
+}
+
+.deal_card {
+    flex: 0 0 280px;
+    background: var(--color-4);
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.deal_card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+
+}
+
+.deal_card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.deal_info {
+    padding: 1rem;
+    background-color: var(--color-1);
+    color: var(--color-5);
+    text-align: center;
+}
+
+.deal_info h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.deal_info p {
+    margin-top: 0.5rem;
+    font-size: 0.95rem;
+    color: var(--color-accent, #ffd700);
+}
