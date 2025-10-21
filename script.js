@@ -9,8 +9,9 @@ buttons.forEach(button => {
         const category = button.getAttribute('data-category');
 
         cards.forEach(card => {
-            const cardCategory = card.getAttribute('data-category');
-            if (category === 'all' || cardCategory === category) {
+            const cardCategory = card.getAttribute('data-category').split(' ');
+
+            if (category === 'all' || cardCategory.includes(category)) {
                 card.style.display = 'block';
             } else {
                 card.style.display = 'none';
