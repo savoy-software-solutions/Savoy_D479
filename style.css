@@ -126,7 +126,7 @@ header h1 a:focus {
     color: var(--color-4);
 }
 
-/* Card Grid */
+/* Card Scroll Grid */
 .scroll_wrapper {
     width: 100%;
     overflow-x: auto;
@@ -194,6 +194,41 @@ header h1 a:focus {
 .card:hover {
     transform: translateY(-5px);
 }
+
+/* grid layout styling for supporting pages */
+
+.grid_layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    justify-items: center;
+    align-items: stretch;
+    width: 100%;
+    padding: 2rem 4rem;
+    box-sizing: border-box;
+}
+
+.grid_layout .card {
+    background-color: var(--color-3);
+    border-radius: 10px;
+    box-shadow: hidden;
+    overflow: hidden;
+    text-align: center;
+    width: 100%;
+    max-width: 350px;
+    transition: trnasform 0.3s ease;
+}
+
+.grid_layout .card:hover {
+    transform: translateY(-5px);
+}
+
+.grid_layout .card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
 
 /* Responsive Adjustments */
 @media (max0width: 768px) {
