@@ -267,8 +267,8 @@ header h1 a:focus {
     background-image: url('../images/transportation.jpg');
 }
 
-.banner-places {
-    background-image: url();
+.banner_places {
+    background-image: url('../images/resort_banner.jpg');
 }
 
 .banner_things {
