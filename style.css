@@ -276,7 +276,7 @@ header h1 a:focus {
 }
 
 .banner_know {
-    background-image: url();
+    background-image: url('../images/know_banner.jpg');
 }
 
 /* FAQ Section Styling */
