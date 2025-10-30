@@ -161,11 +161,11 @@ header h1 a:focus {
 /* Individual Cards */
 .card {
     flex: 0 0 280px;
-    height: 350px;
+    height: auto;
     background-color: var(--color-3);
     border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0,1);
-    overflow: hidden;
+    overflow: visible;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -176,7 +176,7 @@ header h1 a:focus {
     width: 100%;
     height: 200px;
     object-fit: cover;
-    border-radius: 8ps;
+    border-radius: 8px;
 }
 
 .card h3 {
@@ -195,6 +195,23 @@ header h1 a:focus {
     transform: translateY(-5px);
 }
 
+.card button {
+    align-self: center;
+    background-color: var(--color-1);
+    /* color: var(--color-5); */
+    border: none;
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.card a {
+    text-decoration: none;
+    color: var(--color-4);
+    font-weight: 500;
+}
+
 /* grid layout styling for supporting pages */
 
 .grid_layout {
@@ -209,14 +226,20 @@ header h1 a:focus {
 }
 
 .grid_layout .card {
-    background-color: var(--color-3);
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-5);
     border-radius: 10px;
-    box-shadow: hidden;
-    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: visible;
     text-align: center;
+    justify-content: space-between;
     width: 100%;
     max-width: 350px;
-    transition: trnasform 0.3s ease;
+    height: auto;
+    padding: 1rem;
+    transition: transform 0.3s ease;
+    box-sizing: border-box;
 }
 
 .grid_layout .card:hover {
@@ -227,6 +250,34 @@ header h1 a:focus {
     width: 100%;
     height: 200px;
     object-fit: cover;
+    border-radius: 8px;
+}
+
+.grid_layout .card h3 {
+    margin: 1rem 0 0.5rem;
+    color: var(--color-4);
+}
+
+.grid_layout .card p {
+    flex-grow: 1;
+    color: var(--color-4);
+    margin-bottom: 1rem;
+}
+
+.grid_layout .card button {
+    align-self: center;
+    background-color: var(--color-3);
+    color: var(--color-5);
+    border: none;
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.grid_layout .card button:hover {
+    background-color: var(--color-1);
+    color: var(--color-4);
 }
 
 
@@ -383,7 +434,7 @@ header h1 a:focus {
 
 .deals_section {
     padding: 3rem 2 rem;
-    background-color: var(--color-2);
+    background-color: var(--color-5);
     color: var(--color-5);
 }
 
@@ -424,6 +475,21 @@ header h1 a:focus {
     width: 100%;
     height: 180px;
     object-fit: cover;
+}
+
+.deal_card button {
+    align-self: center;
+    background-color: var(--color-3);
+    border: none;
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.deal_card a {
+    text-decoration: none;
+    color: var(--color-5);
 }
 
 .deal_info {
