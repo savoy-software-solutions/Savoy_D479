@@ -227,6 +227,12 @@ h2 {
     scrollbar-color: var(--color-1) transparent;
 }
 
+.scroll_wrapper h2 {
+    font-size: 1.6rem;
+    color: var(--color-4);
+    margin: 0 0 1rem 1rem;
+}
+
 .scroll_wrapper::-webkit-scrollbar {
     height: 8px;
 }
@@ -238,11 +244,18 @@ h2 {
 
 /* CARD CONTAINER */
 
-.card_container {
+.scroll_wrapper .card_container {
     display: flex;
-    gap: 1.25rem;
-    padding: 1rem 1.25rem;
-    align-items: stretch;
+    gap: 1.5rem;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    padding: 0 1rem 1rem;
+}
+
+.scroll_wrapper .card {
+    scroll-snap-align: start;
+    flex: 0 0 auto;
 }
 
 /* BASE CARD STYLE */
@@ -528,5 +541,17 @@ h2 {
     .filter_bar {
         gap: 0.5rem;
         padding: 0.5rem;
+    }
+}
+
+@media (max_width: 768px) {
+    .scroll_wrapper h2 {
+        text-align: center;
+        margin: 0 0 1rem 0;
+    }
+
+    .scroll_wrapper .card_container {
+        gap: 1rem;
+        padding: 0 0.5rem 1rem;
     }
 }
