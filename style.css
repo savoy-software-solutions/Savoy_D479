@@ -19,71 +19,86 @@ body {
 }
 
 /* HEADER */
-header #landing_header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 1rem 1.5rem;
-    height: 200px;
+
+#landing_header {
     position: relative;
-    background-image: url('../images/landing_header.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: var(--color-5);
-    z-index: 0;
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    background-color: var(--color-5);
 }
 
-header #landing_header::before  {
+#landing_header img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 0;
+    opacity: 0.9;
+}
+
+#landing_header::before {
     content: '';
     position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.2);
-    z-index: 0;
-}
-
-header .site_title,
-header .navbar {
-    position: relative;
+    top: 0;
+    left: 0;
+    width:100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.35);
     z-index: 1;
 }
 
-header .site_title {
-    margin: 0;
-    font-size: 1.6rem;
-    font-weight: 700;
+.header_content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
 }
 
-header .site_title a {
+.header_content h1 {
+    position: absolute;
+    top: 20px;
+    left: 40px;
+    margin: 0;
+    font-size: 1.8rem;
+    color: var(--color-5);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.header_content h1 a {
     color: var(--color-5);
     text-decoration: none;
 }
 
-header .site_title a:focus,
-header .site_title a:hover {
-    color: var(--color-2);
-}
-
 /* NAVIGATION BAR */
+
+.navbar {
+    position: absolute;
+    top: 25px;
+    right: 40px;
+}
 
 .navbar ul {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
-    gap: 1rem;
-    align-items: center;
+    gap: 1.5rem;
 }
 
 .navbar a {
     color: var(--color-5);
     text-decoration: none;
-    padding: 0.4rem 0.6rem;
-    gap: 1rem;
-    align-items: center;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: var(--color-3) 0.3s ease;
 }
 
-.navbar a:focus,
 .navbar a:hover {
     color: var(--color-2);
 }
@@ -91,19 +106,55 @@ header .site_title a:hover {
 /* RESPONSIVE HEADER */
 
 @media (max-width: 860px) {
-    header #landing_header {
-        height: auto;
-        padding: 1rem;
-        align-items: center;
-        text-align: center;
-        flex-direction: column;
-        gap: 0.75rem;
+    #landing_header {
+        height: 150px;
+    }
+
+    .header_content h1 {
+        top: 15px;
+        left: 20px;
+        font-size:1.4rem;
+    }
+
+    .navbar {
+        top: 60px;
+        right: 20px;
     }
 
     .navbar ul {
         flex-wrap: wrap;
-        justify-content: center;
-        gap: 0.5;
+        justify-content: flex-end;
+        gap: 0.75rem;
+    }
+
+    .navbar a {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #landing_header {
+        height: 120px;
+    }
+
+    .header_content h1 {
+        top: 10px;
+        left: 15px;
+        font-size:1.2rem;
+    }
+
+    .navbar {
+        top: 60px;
+        right: 10px;
+    }
+
+    .navbar ul {
+        justify-content: flex-start;
+        gap: 0.5rem;
+    }
+
+    .navbar a {
+        font-size: 0.85rem;
     }
 }
 
@@ -203,7 +254,7 @@ h2 {
     height: 380px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: stretch;
     background: var(--color-3);
     border-radius: 14px;
@@ -240,20 +291,19 @@ h2 {
 }
 
 .card_content p {
-    margin: 0;
-    color: var(--color-4);
-    font-size: 0.95rem;
-    line-height: 1.35;
-    flex: 1 1 auto;
-    min-height: 3.2rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 /* CARD CTA BUTTON */
 
 .card_btn {
     display: inline-block;
-    margin: 0.9rem auto 1rem;
-    padding: 0.6rem 1rem;
+    margin-top: auto;
+    padding: 0.75rem;
     background: var(--color-1);
     color: var(--color-5);
     border-radius: 999px;
