@@ -2,23 +2,38 @@
 
 function hideCardWithFade(card) {
     if (!card) return;
-    card.classList.add('fade-out');
+    
+    if (card.classList.contains('hidden')) return;
+
+    card.classList.add('fade-out')
+
     const onTransitionEnd = (e) => {
         if (e.propertyName === 'opacity') {
             card.classList.add('hidden');
-            card.removeEventListener('transitionend', onTransitionEnd);
             card.classList.remove('fade-out');
+            card.removeEventListener('transitionend', onTransitionEnd);
         }
     };
-    card.addEventListener('transitioned', onTransitionEnd);
+
+    card.addEventListener('transitionend', onTransitionEnd);
 }
 
 function showCardWithFade(card) {
     if (!card) return;
+
+    if (!card.classList.contains('hidden') && !card.classList.contains('fade-out')) return;
+
     card.classList.remove('hidden');
-    card.offsetHeight;
-    card.classList.remove('fade-out');
+    card.classList.add('fade-out');
+
+    requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+            card.classList.remove('fade-out');
+        });
+    });
 }
+
+
 
 // FILTER LOGIC
 
@@ -28,16 +43,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     filterButtons.forEach(button => {
         button.addEventListener('click', () => {
-            filterButtons.forEach(b => {b.classList.remove('active');
+            filterButtons.forEach(b => {
+                b.classList.remove('active');
                 b.setAttribute('aria-pressed', 'false');
             });
             button.classList.add('active');
             button.setAttribute('aria-pressed', 'true');
 
-            const category = (button.getAttribute('data_category') || '').toLowerCase();
+            const category = (button.getAttribute('data-category') || '').toLowerCase();
 
             cards.forEach(card => {
-                const cardCats = (card.getAttribute('data_category') || '').toLowerCase().split(/\s+/).filter(Boolean);
+                const cardCats = (card.getAttribute('data-category') || '').toLowerCase().split(/\s+/).filter(Boolean);
 
                 if (category === 'all' || cardCats.includes(category)) {
                     if (card.classList.contains('hidden')) showCardWithFade(card);
@@ -48,7 +64,21 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    document.querySelectorAll('.filter_btn[data_category="all"]').forEach(b => b.click());
+    const allBtn = document.querySelector('.filter_btn[data-category="all"]');
+    if (allBtn) allBtn.click();
+});
+
+// TOGGLE MOBILE MENU
+
+document.addEventListener('DOMContentLoaded', () => {
+    const toggle = document.querySelector('.mobile_menu_toggle');
+    const navLinks = document.querySelector('.nav_links');
+
+    toggle.addEventListener('click', () => {
+        const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', String(!isExpanded));
+        navLinks.classList.toggle('active');
+    });
 });
 
 // FAQ ACCORDION
@@ -78,7 +108,7 @@ document.addEventListener('click', (e) => {
         else backBtn.classList.remove('visible');
     });
 
-    backBtn.addEventListener('clicki', () => {
+    backBtn.addEventListener('click', () => {
         window.scrollTo({ top: 0, behavior: 'smooth'});
     });
 })();

@@ -10,14 +10,20 @@
 
 <body>
     <!-- HEADER -->
-    <header id="landing_header" class="banner_home" role="banner" area-label="Site header">
+    <header id="landing_header" class="banner_home" role="banner" aria-label="Site header">
         <div class="overlay"></div>
         <img src="../images/landing_header.jpg" alt="Tropical Beach">
         <div class="header_content">
             <h1 class="site_title"><a href="index.html">Welcome to Taniti</a></h1>
+
+            <!-- MOBILE TOGGLE MENU -->
+            <button class="mobile_menu_toggle" aria-label="Open Menu" aria-expanded="false">
+                ☰
+            </button>
+
             <!-- NAVIGATION BAR -->
             <nav class="navbar" role="navigation" aria-label="Main navigation">
-                <ul>
+                <ul class="nav_links">
                     <li><a href="thingsToDo.html">Things to do</a></li>
                     <li><a href="placesToStay.html">Place to stay</a></li>
                     <li><a href="aroundTheIsland.html">Getting around</a></li>
@@ -67,7 +73,7 @@
                             hiking trail through the Taniti National Park, breath taking
                             views can be captured by this island's wonder.
                         </p>
-                    </div class="card_content">
+                    </div>
                     <a class="card_btn" href="thingsToDo.html">Explore More</a>
                 </article>
 
