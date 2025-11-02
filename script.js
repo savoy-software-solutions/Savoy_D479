@@ -112,3 +112,38 @@ document.addEventListener('click', (e) => {
         window.scrollTo({ top: 0, behavior: 'smooth'});
     });
 })();
+
+// FILTER LOGIC FOR SUPPORT PAGES
+
+document.addEventListener('DOMContentLoaded', () => {
+    const ctaMenuButtons = document.querySelectorAll('.cta_menu_btn');
+
+    if (ctaMenuButtons.length === 0) return;
+
+    const cards = document.querySelectorAll('.grid_layout .card');
+
+    ctaMenuButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            ctaMenuButtons.forEach(b => {
+                b.classList.remove('active');
+            });
+
+            button.classList.add('active');
+
+            const category = (button.getAttribute('data-category') || '').toLowerCase();
+
+            cards.forEach(card => {
+                const cardCats = (card.getAttribute('data-category') || '').toLowerCase().split(/\s+/).filter(Boolean);
+
+                if (category === 'all' || cardCats.includes(category)) {
+                    if (card.classList.contains('hidden')) showCardWithFade(card);
+                } else {
+                    if (!card.classList.contains('hidden')) hideCardWithFade(card);
+                }
+            });
+        });
+    });
+
+    const allBtn = document.querySelector('.cta_menu_btn[data-category="all"]');
+    if (allBtn) allBtn.classList.add('active');
+});
