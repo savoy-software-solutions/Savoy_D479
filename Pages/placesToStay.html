@@ -9,25 +9,33 @@
 </head>
 
 <body>
-    <header class="support_page">
-        <h1><a href="index.html">Welcome to Taniti</a></h1>
-        <!-- Navigation Bar -->
-        <nav class="navbar">
-            <ul>
-                <li><a href="thingsToDo.html">Things to do</a></li>
-                <li><a href="placesToStay.html">Place to stay</a></li>
-                <li><a href="aroundTheIsland.html">Getting around</a></li>
-                <li><a href="thingsToKnow.html">Things to know</a></li>
-                <li><a href="dealsOffers.html">Deals & Offers</a></li>
-            </ul>
-        </nav>
+    <header class="support_page" role="banner" aria-label="Site header">
+        <div class="header_content">
+            <h1 class="site_title"><a href="index.html">Welcome to Taniti</a></h1>
+
+            <button class="mobile_menu_toggle" aria-label="Open Menu" aria-expanded="false">
+                ☰
+            </button>
+
+            <!-- Navigation Bar -->
+            <nav class="navbar" role="navigation" aria-label="Main navigation">
+                <ul class="nav_links">
+                    <li><a href="thingsToDo.html">Things to do</a></li>
+                    <li><a href="placesToStay.html">Place to stay</a></li>
+                    <li><a href="aroundTheIsland.html">Getting around</a></li>
+                    <li><a href="thingsToKnow.html">Things to know</a></li>
+                    <li><a href="dealsOffers.html">Deals & Offers</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
- <section class="banner banner_places"></section>
+    <section class="banner banner_around">
+        <div class="banner_overlay"></div>
+        <h2>Places to stay on the island of Taniti</h2>
+    </section>
 
     <section class="page_details">
-        <h2>Places to stay in Taniti</h2>
-
         <div class="details">
 
         </div>
@@ -46,26 +54,38 @@
         <div class="card_container grid_layout">
             <div class="card" data-category="other">
                 <img src="../images/hostel.jpg" alt="Hostel">
-                <h3>Local Hostels</h3>
-                <p>Afford living for the travler's adventure</p>
+                <div class="card_content">
+                    <h3>Local Hostels</h3>
+                    <p>Afford living for the travler's adventure</p>
+                </div>
+                <a class="card_btn" href="testPage.html">Learn More</a>
             </div>
 
             <div class="card" data-category="hotel">
                 <img src="../images/local_hotel.jpg" alt="Family Hotel">
-                <h3>Local Fmaily Owned Hotels</h3>
-                <p>Found all over the island, small family owned hotels offer a cozy stay in true Taniti fasion.</p>
+                <div class="card_content">
+                    <h3>Local Fmaily Owned Hotels</h3>
+                    <p>Found all over the island, small family owned hotels offer a cozy stay in true Taniti fasion.</p>
+                </div>
+                <a class="card_btn" href="testPage.html">Learn More</a>
             </div>
 
             <div class="card" data-category="resort">
                 <img src="../images/resort.jpg" alt="Resort">
-                <h3>4 Star Resorts</h3>
-                <p>Luxery living, Taniti style. Whether it be a honeymoon or a family getaway, several resorts found on Taniti provide the dream vacation</p>
+                <div class="card_content">
+                    <h3>4 Star Resorts</h3>
+                    <p>Luxery living, Taniti style. Whether it be a honeymoon or a family getaway, several resorts found on Taniti provide the dream vacation</p>
+                </div>
+                <a class="card_btn" href="testPage.html">Learn More</a>
             </div>
 
             <div class="card" data-category="other">
                 <img src="../images/bnb.jpg" alt="Bed and Breakfast">
-                <h3>Bed and Breakfast</h3>
-                <p>Find a number of locally ran bed and breakfast that will provide the home away from home.</p>
+                <div class="card_content">
+                    <h3>Bed and Breakfast</h3>
+                    <p>Find a number of locally ran bed and breakfast that will provide the home away from home.</p>
+                </div>
+                <a class="card_btn" href="testPage.html">Learn More</a>
             </div>
 
 
