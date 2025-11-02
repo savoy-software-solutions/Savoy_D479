@@ -285,9 +285,27 @@ h2 {
 
 .grid_layout {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 1.5rem;
     padding: 0;
+}
+
+.grid_layout .card {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    min-height: 350px;
+    flex: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    background: var(--color-3);
+    border-radius: 14px;
+    overflow: hidden;
+    transition: transform 300ms ease, box-shadow 300ms ease, opacity 300ms ease;
+    position: relative;
+    justify-self: center;
 }
 
 .grid_layout .deal_card {
