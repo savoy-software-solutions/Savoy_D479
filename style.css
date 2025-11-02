@@ -730,7 +730,7 @@ h2 {
 }
 
 #back_to_top.visible {
-    display: flex;
+    display: flex !important;
 }
 
 /* RESPONSIVE TWEAKS */

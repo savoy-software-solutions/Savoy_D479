@@ -147,9 +147,3 @@ document.addEventListener('DOMContentLoaded', () => {
     const allBtn = document.querySelector('.cta_menu_btn[data-category="all"]');
     if (allBtn) allBtn.classList.add('active');
 });
-
-// EXPANDABLE TEXT
-
-.card_content package.extended {
-    -webkit-line-clamp: unset;
-}
