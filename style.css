@@ -290,6 +290,65 @@ h2 {
     padding: 0;
 }
 
+.grid_layout .deal_card {
+    width: 100%;
+    height: auto;
+    min-height: 380px;
+    background: linear-gradient(180deg, var(--color-5), var(--color-2));
+    border-radius: 12px;
+    border: 2px solid rgba(255, 140, 66, 0.12);
+    color: var(--color-4);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+    transition: transform 300ms ease, box-shadow 300ms ease;
+}
+
+.grid_layout .deal_card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.14);
+}
+
+.grid_layout .deal_card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.grid_layout .deal_info {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    flex: 1 1 auto;
+}
+
+.grid_layout .deal_info p {
+    margin: 0;
+    color: var(--color-4);
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.grid_layout .deal_footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    padding-top: 0.5rem;
+}
+
+.grid_layout .deal_location {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: var(--color-4);
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
 .grid_layout .card {
     width: 100%;
     height: auto;
@@ -811,6 +870,10 @@ h2 {
     align-items: center;
     justify-content: center;
     overflow: hidden;
+}
+
+.banner_deals {
+    background-image: url();
 }
 
 .banner_overlay {
