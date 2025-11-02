@@ -9,25 +9,33 @@
 </head>
 
 <body>
-    <header class="support_page">
-        <h1><a href="index.html">Welcome to Taniti</a></h1>
-        <!-- Navigation Bar -->
-        <nav class="navbar">
-            <ul>
-                <li><a href="thingsToDo.html">Things to do</a></li>
-                <li><a href="placesToStay.html">Place to stay</a></li>
-                <li><a href="aroundTheIsland.html">Getting around</a></li>
-                <li><a href="thingsToKnow.html">Things to know</a></li>
-                <li><a href="dealsOffers.html">Deals & Offers</a></li>
-            </ul>
-        </nav>
-    </header>
+    <header class="support_page" role="banner" aria-label="Site header">
+        <div class="header_content">
+            <h1 class="site_title"><a href="index.html">Welcome to Taniti</a></h1>
 
- <section class="banner banner_things"></section>
+            <button class="mobile_menu_toggle" aria-label="Open Menu" aria-expanded="false">
+                ☰
+            </button>
+
+            <!-- Navigation Bar -->
+            <nav class="navbar" role="navigation" aria-label="Main navigation">
+                <ul class="nav_links">
+                    <li><a href="thingsToDo.html">Things to do</a></li>
+                    <li><a href="placesToStay.html">Place to stay</a></li>
+                    <li><a href="aroundTheIsland.html">Getting around</a></li>
+                    <li><a href="thingsToKnow.html">Things to know</a></li>
+                    <li><a href="dealsOffers.html">Deals & Offers</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+                    <!-- RETURN AND HANDLE TODO -->
+    <section class="banner banner_toDo">
+        <div class="banner_overlay"></div>
+        <h2>Things to do in Taniti</h2>
+    </section>
 
     <section class="page_details">
-        <h2>Things to do in Taniti</h2>
-
         <div class="details">
 
         </div>
@@ -48,20 +56,29 @@
         <div class="card_container grid_layout">
             <div class="card" data-category="nature">
                 <img src="../images/rocky_beach.jpg" alt="Sandy Rock beach">
-                <h3>Sandy & Rocky Beaches</h3>
-                <p>Enjoy the scenic beaches of Taniti</p>
+                <div class="card_content">
+                    <h3>Sandy & Rocky Beaches</h3>
+                    <p>Enjoy the scenic beaches of Taniti</p>
+                </div>
+                <a class="card_btn" href="testPage.html">Learn More</a>
             </div>
 
             <div class="card" data-category="food">
                 <img src="../images/local_restaurant_1.jpg" alt="Restaurants">
-                <h3>Local Restaurants</h3>
-                <p>Enjoy the delicies of Taniti</p>
+                <div class="card_content">
+                    <h3>Local Restaurants</h3>
+                    <p>Enjoy the delicies of Taniti</p>
+                </div>
+                <a class="card_btn" href="testPage.html">Learn More</a>
             </div>
 
             <div class="card" data-category="culture">
                 <img src="../images/museum.jpg" alt="Museum">
-                <h3>Local History Museum</h3>
-                <p>check out the local history</p>
+                <div class="card_content">
+                    <h3>Local History Museum</h3>
+                    <p>check out the local history</p>
+                </div>
+                <a class="card_btn" href="testPage.html">Learn More</a>
             </div>
 
             <div class="card" data-category="family">
