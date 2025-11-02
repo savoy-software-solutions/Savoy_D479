@@ -9,73 +9,96 @@
 </head>
 
 <body>
-    <header class="support_page">
-        <h1><a href="index.html">Welcome to Taniti</a></h1>
-        <!-- Navigation Bar -->
-        <nav class="navbar">
-            <ul>
-                <li><a href="thingsToDo.html">Things to do</a></li>
-                <li><a href="placesToStay.html">Place to stay</a></li>
-                <li><a href="aroundTheIsland.html">Getting around</a></li>
-                <li><a href="thingsToKnow.html">Things to know</a></li>
-                <li><a href="dealsOffers.html">Deals & Offers</a></li>
-            </ul>
-        </nav>
+    <header class="support_page" role="banner" aria-label="Site header">
+        <div class="header_content">
+            <h1 class="site_title"><a href="index.html">Welcome to Taniti</a></h1>
+
+            <button class="mobile_menu_toggle" aria-label="Open label" aria-expanded="false">
+                ☰
+            </button>
+
+            <!-- Navigation Bar -->
+            <nav class="navbar" role="navigation" aria-label="Main navigation">
+                <ul class="nav_links">
+                    <li><a href="thingsToDo.html">Things to do</a></li>
+                    <li><a href="placesToStay.html">Place to stay</a></li>
+                    <li><a href="aroundTheIsland.html">Getting around</a></li>
+                    <li><a href="thingsToKnow.html">Things to know</a></li>
+                    <li><a href="dealsOffers.html">Deals & Offers</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
- <section class="banner banner_know"></section>
+    <section class="banner banner_know">
+        <div class="banner_overlay"></div>
+        <h2>Things to know before your trip to Taniti</h2>
+    </section>
 
     <section class="page_details">
-        <h2>Things to know before your trip</h2>
-
         <div class="details">
 
         </div>
     </section>
 
     <section class="cta_container">
+
         <!-- card options  -->
         <div class="card_container grid_layout">
             <div class="card">
                 <img src="../images/wallet.jpg" alt="wallet">
-                <h3>Currency</h3>
-                <p>Taniti accepts xxxxxxxxx</p>
+                <div class="card_content">
+                    <h3>Currency</h3>
+                    <p>Taniti accepts xxxxxxxxx</p>
+                </div>
             </div>
 
             <div class="card">
                 <img src="../images/doctor.jpg" alt="doctor">
-                <h3>Health Care</h3>
-                <p>hosiptals, clinics, etc etc etc</p>
+                <div class="card_content">
+                    <h3>Health Care</h3>
+                    <p>hosiptals, clinics, etc etc etc</p>
+                </div>
             </div>
 
             <div class="card">
                 <img src="../images/conversation.jpg" alt="conversation">
-                <h3>Spoken Languages</h3>
-                <p>Taniti speaks xxxxxxxxxx</p>
+                <div class="card_content">
+                    <h3>Spoken Languages</h3>
+                    <p>Taniti speaks xxxxxxxxxx</p>
+                </div>
             </div>
 
             <div class="card">
                 <img src="../images/power_outlet.jpg" alt="power outlet">
-                <h3>Power Outlets</h3>
-                <p>Be prepared to use sbc outlets</p>
+                <div class="card_content">
+                    <h3>Power Outlets</h3>
+                    <p>Be prepared to use sbc outlets</p>
+                </div>
             </div>
             
             <div class="card">
-                <img src="../images/alcohol.jpg" alt="aalcoholic drinks">
-                <h3>Legal Drinking Age</h3>
-                <p>Legal drinking age is 18 loosely enforced</p>
+                <img src="../images/alcohol.jpg" alt="alcoholic drinks">
+                <div class="card_content">
+                    <h3>Legal Drinking Age</h3>
+                    <p>Legal drinking age is 18 loosely enforced</p>
+                </div>
             </div>
 
             <div class="card">
                 <img src="../images/fireworks.jpg" alt="fireworks">
-                <h3>Holidays</h3>
-                <p>list of holidays and events</p>
+                <div class="card_content">
+                    <h3>Holidays</h3>
+                    <p>list of holidays and events</p>
+                </div>
             </div>
 
             <div class="card">
                 <img src="../images/police.jpg" alt="Police Car">
-                <h3>Safety & Local Laws</h3>
-                <p>list of laws</p>
+                <div class="card_content">
+                    <h3>Safety & Local Laws</h3>
+                    <p>list of laws</p>
+                </div>
             </div>
 
         </div>

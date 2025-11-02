@@ -872,8 +872,24 @@ h2 {
     overflow: hidden;
 }
 
+.banner_toDo {
+    background-image: url(images/banner_toDo.jpg);
+}
+
 .banner_deals {
-    background-image: url();
+    background-image: url(images/banner_deals.jpg);
+}
+
+.banner_places {
+    background-image: url(images/banner_places.jpg);
+}
+
+.banner_around {
+    background-image: url(images/banner_tropic_road.jpg) ;
+}
+
+.banner_know {
+    background-image: url(images/banner_know.jpg);
 }
 
 .banner_overlay {
@@ -895,10 +911,6 @@ h2 {
     text-align: center;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
     padding: 0 1rem;
-}
-
-.banner_around {
-    background-image: url(images/banner_tropic_road.jpg) ;
 }
 
 @media (max-width: 768px) {
