@@ -308,6 +308,26 @@ h2 {
     justify-self: center;
 }
 
+.grid_layout .card .card_btn {
+    width: 140px;
+    align-self: center;
+    padding: 0.6rem 1rem;
+    margin-top: 0;
+    display: inline-block;
+    background: var(--color-1);
+    color: var(--color-5);
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 700;
+    text-align: center;
+    transition: background 220ms ease, transform 150ms ease;
+}
+
+.grid_layout .card_btn::hover {
+    background: var(--color-2);
+    transform: translateY(-2px);
+}
+
 .grid_layout .deal_card {
     width: 100%;
     height: auto;
@@ -499,7 +519,8 @@ h2 {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    flex: 1 1 auto;
+    flex: 0 1 auto;
+    overflow: hidden;
 }
 
 .card_content h3 {
@@ -509,30 +530,55 @@ h2 {
 }
 
 .card_content p {
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    display: block;
+    max-height: 70px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    text-overflow: clip;
+    padding-right: 0.25rem;
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-1) transparent;
+    margin: 0;
+}
+
+.card_content p::-webkit-scrollbar {
+    width: 6px;
+}
+
+.card_content p::-webkit-scrollbar_thumb {
+    background: var(--color-4);
+    border-radius: 3px;
+}
+
+.card_content p::-webkit-scrollbar-track {
+    background: transparent;
 }
 
 /* CARD CTA BUTTON */
 
 .card_btn {
     display: inline-block;
-    margin-top: auto;
-    padding: 0.75rem;
+    margin-top: 0;
+    padding: 0.6rem 1.2rem;
     background: var(--color-1);
     color: var(--color-5);
     border-radius: 999px;
     text-decoration: none;
     font-weight: 700;
     transition: background 220ms ease, transform 150ms ease;
+    text-align: center;
+    width: auto;
 }
 
 .card_btn:hover {
     background: var(--color-2);
     transform: translateY(-2px);
+}
+
+.scroll_wrapper .card .card_btn {
+    width: 140px;
+    align-self: center;
+    padding: 0.6rem 1rem;
 }
 
 /* FILTER ANIMATION */
