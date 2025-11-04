@@ -344,7 +344,7 @@ CONTAINERS
 .page_details {
     max-width: 1200px;
     margin: 2rem auto;
-    padding: 0 1rem;
+    padding: 0 4rem;
 }
 
 /*
@@ -423,9 +423,11 @@ GRID LAYOUT
 
 .grid_layout {
     display: grid;
-    grid-template-columns: repeat(aut-fill, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 1.5rem;
     padding: 0;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .grid_layout .card {
@@ -459,7 +461,7 @@ GRID LAYOUT
     display: block;
 }
 
-.grid_layout .card .h3 {
+.grid_layout .card h3 {
     margin: 0;
     padding: 0.9rem 1rem 0.5rem;
     color: var(--color-4);
@@ -807,7 +809,7 @@ BACK TO TOP BUTTON
     z-index: 1000;
 }
 
-#box_to_top.visible {
+#back_to_top.visible {
     display: flex !important;
 }
 
@@ -912,10 +914,10 @@ RESPONSIVE DESIGN
         height: 360px;
     }
 
-    .grid_layout {
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    /* .grid_layout {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
         gap: 1.25rem;
-    }
+    } */
 }
 
 @media (max-width: 768px) {
@@ -925,11 +927,6 @@ RESPONSIVE DESIGN
 
     .banner h2 {
         font-size: 1.8rem;
-    }
-
-    .grid_layout {
-        grid-template-columns: 1fr;
-        gap: 1rem;
     }
 
     .grid_layout .card {
@@ -984,6 +981,13 @@ RESPONSIVE DESIGN
 
     .section_divider {
         height: 90px;
+    }
+}
+
+@media (max-width: 500px) {
+    .grid_layout {
+        grid-template-columns: 1fr;
+        gap: 1rem;
     }
 }
 
