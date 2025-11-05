@@ -913,11 +913,6 @@ RESPONSIVE DESIGN
         width: 260px;
         height: 360px;
     }
-
-    /* .grid_layout {
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-        gap: 1.25rem;
-    } */
 }
 
 @media (max-width: 768px) {
@@ -941,6 +936,21 @@ RESPONSIVE DESIGN
     .scroll_wrapper .card_container {
         gap: 1rem;
         padding: 0 0.5rem 1rem;
+    }
+
+    .banner_caption {
+        font-size: 0.6rem;
+        padding: o.25rem 0.4rem;
+        bottom: 0.3rem;
+        right: 0.3rem;
+    }
+
+    .header_caption,
+    .divider_caption {
+        font-size: 0.6rem;
+        padding: 0.25rem 0.4rem;
+        bottom: 0.3rem;
+        right: 0.3rem;
     }
 }
 
@@ -1077,4 +1087,129 @@ IMAGE CAPTION OVERLAY
 .banner .image_wrapper {
     width: 100%;
     height: 100%;
+}
+
+.banner_caption {
+    position: absolute;
+    bottom: 0.5rem;
+    right: 0.5rem;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 0.3rem 0.5rem;
+    border-radius: 4px;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    font-size: 0.65rem;
+    line-height: 1.3;
+}
+
+.banner:hover .banner_caption {
+    opacity: 1;
+}
+
+.banner_caption .photo_credit {
+    color: var(--color-5);
+    font-size: 0.65rem;
+}
+
+.banner_caption a {
+    color: var(--color-2);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.banner_caption a:hover {
+    color: var(--color-1);
+    text-decoration: underline;
+}
+
+/*
+HEADER BANNER CAPTION
+*/
+
+.header_banner_caption {
+    position: absolute;
+    bottom: 0.5rem;
+    right: 0.5rem;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 0.3rem 0.5rem;
+    border-radius: 4px;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    font-size: 0.65rem;
+    line-height: 1.3;
+}
+
+#landing_header:hover .header_banner_caption {
+    opacity: 1;
+}
+
+.header_banner_caption .photo_credit {
+    color: var(--color-5);
+    font-size: 0.65rem;
+}
+
+.header_banner_caption a {
+    color: var(--color-2);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.header_banner_caption a:hover {
+    color: var(--color-1);
+    text-decoration: underline;
+}
+
+/*
+SECTION DIVIDER BANNER CAPTION
+*/
+
+.section_divider {
+    position: relative;
+    width: 100%;
+    height: 120px;
+}
+
+.divider_caption {
+    position: absolute;
+    bottom: 0.5rem;
+    right: 0.5rem;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 0.3rem 0.5rem;
+    border-radius: 4px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    font-size: 0.65rem;
+    line-height: 1.3;
+}
+
+.section_divider:hover .divider_caption {
+    opacity: 1;
+}
+
+.divider_caption .photo_credit {
+    color: var(--color-5);
+    font-size: 0.65rem;
+}
+
+.divider_caption a {
+    color: var(--color-2);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.divider_caption a:hover {
+    color: var(--color-1);
+    text-decoration: underline;
 }
