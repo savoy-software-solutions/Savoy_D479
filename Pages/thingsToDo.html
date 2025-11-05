@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Things to do in Taniti</title>
+    <link rel="stylesheet" href="../style.css">
+    <script defer src="../script.js"></script>
+</head>
+
+<body>
+    <header class="support_page" role="banner" aria-label="Site header">
+        <div class="header_content">
+            <h1 class="site_title"><a href="index.html">Welcome to Taniti</a></h1>
+
+            <button class="mobile_menu_toggle" aria-label="Open Menu" aria-expanded="false">
+                ☰
+            </button>
+
+            <!-- Navigation Bar -->
+            <nav class="navbar" role="navigation" aria-label="Main navigation">
+                <ul class="nav_links">
+                    <li><a href="thingsToDo.html">Things to do</a></li>
+                    <li><a href="placesToStay.html">Place to stay</a></li>
+                    <li><a href="aroundTheIsland.html">Getting around</a></li>
+                    <li><a href="thingsToKnow.html">Things to know</a></li>
+                    <li><a href="dealsOffers.html">Deals & Offers</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+                    <!-- HERO BANNER -->
+    <section class="banner banner_toDo">
+        <div class="banner_overlay"></div>
+        <h2>Things to do in Taniti</h2>
+        <div class="banner_caption">
+            <span class="photo_credit">Photo: <a href="https://unsplash.com/photos/person-sliding-on-zip-line-R2yjoctLTEk">Perry Grone</a></span>
+        </div>
+    </section>
+
+    <section class="page_details">
+        <div class="details">
+            <p>
+                Explore, relax and cultural discoveries await in Taniti.
+                Watch the day pass by as you soak up the sun on the white-sand beaches, 
+                find adventure in the dense rainforests or sit upon the edge of Taniti's active volcano.
+                Cool off in the crystal clear waters or cast a rod for a daily catch. Become lost in the 
+                local art, cuisine and traditions found only on the island of Taniti. The sun may go down,
+                but the life of Taniti never sleeps! Enjoy local pubs, microbreweries and dance by the sea.
+                Excitement to tranquility, Taniti holds everything you look for to create last memories.
+            </p>    
+        </div>
+    </section>
+
+    <section class="cta_container">
+    <!-- Filter buttons to sort cards -->
+        <ul class="cta_menu">
+            <li><button class="cta_menu_btn" data-category="all">All</button></li>
+            <li><button class="cta_menu_btn" data-category="food">Food & Drinks</button></li>
+            <li><button class="cta_menu_btn" data-category="nature">Nature</button></li>
+            <li><button class="cta_menu_btn" data-category="culture">Culture</button></li>
+            <li><button class="cta_menu_btn" data-category="family">Family-Fun</button></li>
+            <li><button class="cta_menu_btn" data-category="night">Night Life</button></li>
+        </ul>
+
+        <!-- card options  -->
+        <div class="card_container grid_layout">
+            <div class="card" data-category="nature">
+                <div class="image_wrapper">
+                    <img src="../images/rocky_beach.jpg" alt="Sandy Rock beach">
+                    <div class="image_caption">
+                        <span class="photo_credit">Photo: <a href="https://unsplash.com/photos/tropical-beach-with-palm-trees-and-colorful-boats-y52wvOpKnV8">Bhong Bahala</a></span>
+                    </div>
+                </div>
+                <div class="card_content">
+                    <h3>Sandy & Rocky Beaches</h3>
+                    <p>Enjoy the scenic beaches of Taniti</p>
+                </div>
+                <a class="card_btn" href="testPage.html">Learn More</a>
+            </div>
+
+            <div class="card" data-category="food">
+                <div class="image_wrapper">
+                    <img src="../images/local_restaurant_1.jpg" alt="Restaurants">
+                    <div class="image_caption">
+                        <span class="photo_credit">Photo: <a href="https://unsplash.com/photos/a-group-of-people-sitting-at-a-table-on-the-beach-wX1YwLy5yCM">Norbert Braun</a></span>
+                    </div>
+                </div>
+                <div class="card_content">
+                    <h3>Local Restaurants</h3>
+                    <p>Enjoy the delicies of Taniti</p>
+                </div>
+                <a class="card_btn" href="testPage.html">Learn More</a>
+            </div>
+
+            <div class="card" data-category="culture">
+                <div class="image_wrapper">
+                    <img src="../images/museum.jpg" alt="Museum">
+                    <div class="image_caption">
+                        <span class="photo_credit">Photo: <a href="https://unsplash.com/photos/green-leafed-trees-DiXcXKcAn1s">Ocean Royal</a></span>
+                    </div>
+                </div>
+                <div class="card_content">
+                    <h3>Local History Museum</h3>
+                    <p>check out the local history</p>
+                </div>
+                <a class="card_btn" href="testPage.html">Learn More</a>
+            </div>
+
+            <div class="card" data-category="family">
+                <div class="image_wrapper">
+                    <img src="../images/video_game.jpg" alt="VR Headset">
+                    <div class="image_caption">
+                        <span class="photo_credit">Photo: <a href="https://unsplash.com/photos/man-in-black-crew-neck-t-shirt-wearing-black-sunglasses-holding-black-smartphone-HI6gy-p-WBI">Minh Pham</a></span>
+                    </div>
+                </div>
+                <div class="card_content">
+                    <h3>Arcade</h3>
+                    <p>Spend hours getting lost in Taniti's arcade</p>
+                </div>
+                <a href="testPage.html" class="card_btn">Learn More</a>
+            </div>
+
+            <div class="card" data-category="nature">
+                <div class="image_wrapper">
+                    <img src="../images/sandy_beach.jpg" alt="Sandy Beach">
+                    <div class="image_caption">
+                        <span class="photo_credit">Photo: <a href="https://unsplash.com/photos/brown-wooden-stick-on-white-sand-beach-during-daytime-WYaSEV1FIJU">Kay Dittner</a></span>
+                    </div>
+                </div>
+                <div class="card_content">
+                    <h3>White Sandy Beaches</h3>
+                    <p>Enjoy the white sandy beaches around Yellow Leaf Bay</p>
+                </div>
+                <a href="testPage.html" class="card_btn">Learn More</a>
+            </div>
+
+            <div class="card" data-category="food">
+                <div class="image_wrapper">
+                    <img src="../images/pub.jpg" alt="Pub">
+                    <div class="image_caption">
+                        <span class="photo_credit">Photo: <a href="">Muhammad Hadi</a></span>
+                    </div>
+                </div>
+                <div class="card_content">
+                    <h3>Merriton Landing Pubs</h3>
+                    <p>Enjoy the pubs and microbreweries located around Merriton Landing</p>
+                </div>
+                <a href="testPage.html" class="card_btn">Learn More</a>
+            </div>
+
+            <div class="card" data-category="family culture">
+                <div class="image_wrapper">
+                    <img src="../images/architecture.jpg" alt="architecture">
+                    <div class="image_caption">
+                        <span class="photo_credit">Photo: <a href="https://unsplash.com/photos/modern-white-buildings-surrounding-a-large-tree-JWNj1AoXicw">Studio Archifiction</a></span>
+                    </div>
+                </div>
+                <div class="card_content">
+                    <h3>Native Architecture</h3>
+                    <p>Explore the native architecure of Taniti</p>
+                </div>
+                <a href="testPage.html" class="card_btn">Learn More</a>
+            </div>
+
+            <div class="card" data-category="nature family">
+                <div class="image_wrapper">
+                    <img src="../images/rainforest_tour.jpg" alt="Rainforest Tour">
+                    <div class="image_caption">
+                        <span class="photo_credit">Photo: <a href="https://unsplash.com/photos/a-person-walking-on-a-bridge-oENz4rs43es">Sophie Laurent</a></span>
+                    </div>
+                </div>
+                <div class="card_content">
+                    <h3>Rainforest Tour</h3>
+                    <p>Explore the jungles of Taniti</p>
+                </div>
+                <a href="testPage.html" class="card_btn">Learn More</a>
+            </div>
+
+            <div class="card" data-category="food night">
+                <div class="image_wrapper">
+                    <img src="../images/club.jpg" alt="Club">
+                    <div class="image_caption">
+                        <span class="photo_credit">Photo: <a href="https://unsplash.com/photos/two-women-talking-while-holding-drinking-glasses-MxfcoxycH_Y">Michael discenza</a></span>
+                    </div>
+                </div>
+                <div class="card_content">
+                    <h3>Night Club</h3>
+                    <p>Drinks and night life continue in Taniti</p>
+                </div>
+                <a href="testPage.html" class="card_btn">Learn More</a>
+            </div>
+
+            <div class="card" data-category="culture">
+                <div class="image_wrapper">
+                    <img src="../images/statue.jpg" alt="Statue">
+                    <div class="image_caption">
+                        <span class="photo_credit">Photo: <a href="https://unsplash.com/photos/a-statue-of-a-person-with-a-bird-on-his-head-eorxyC8R4ac">Yomogi</a></span>
+                    </div>
+                </div>
+                <div class="card_content">
+                    <h3>Art Gallery</h3>
+                    <p>take in the locally made art of Taniti</p>
+                </div>
+                <a href="testPage.html" class="card_btn">Learn More</a>
+            </div>
+
+            <div class="card" data-category="nature family">
+                <div class="image_wrapper">
+                    <img src="../images/volcano.jpg" alt="Volcano">
+                    <div class="image_caption">
+                        <span class="photo_credit">Photo: <a href="">Andreas Rasmussen</a></span>
+                    </div>
+                </div>
+                <div class="card_content">
+                    <h3>Taniti's Volcano</h3>
+                    <p>Venture to Taniti's own active volcano</p>
+                </div>
+                <a href="testPage.html" class="card_btn">Learn More</a>
+            </div>
+
+            <div class="card" data-category="food">
+                <div class="image_wrapper">
+                    <img src="../images/market.jpg" alt="Grocery Store">
+                    <div class="image_caption">
+                        <span class="photo_credit">Photo: <a href="https://unsplash.com/photos/a-bunch-of-food-that-is-on-a-table-EiC-oe3KbUg">Lx1</a></span>
+                    </div>
+                </div>
+                <div class="card_content">
+                    <h3>Grocery Options</h3>
+                    <p> 2 supermarkets, 2 smaller grocery stores, 1 24 hour convenience store</p>
+                </div>
+                <a href="testPage.html" class="card_btn">Learn More</a>
+            </div>
+
+           <div class="card" data-category="family night">
+                <div class="image_wrapper">
+                    <img src="../images/bowling.jpg" alt="Bowling Alley">
+                    <div class="image_caption">
+                        <span class="photo_credit">Photo: <a href="https://unsplash.com/photos/a-bowler-is-delivering-the-ball-down-the-lane-EccukZlcJCI">Joseph Sharp</a></span>
+                    </div>
+                </div>
+                <div class="card_content">
+                    <h3>Bowling</h3>
+                    <p>Family fun at the Taniti City bowling alley.</p>
+                </div>
+                <a href="testPage.html" class="card_btn">Learn More</a>
+           </div>
+
+            <div class="card" data-category="nature family">
+                <div class="image_wrapper">
+                    <img src="../images/sailboat.jpg" alt="Sailboat">
+                    <div class="image_caption">
+                        <span class="photo_credit">Photo: <a href="https://unsplash.com/photos/white-and-brown-sailboat-YZDboipFXA0">Martyna Lucja</a></span>
+                    </div>
+                </div>
+                <div class="card_content">
+                    <h3>Bus & Boat Tours</h3>
+                    <p>Explore the island by bus and boat</p>
+                </div>
+                <a href="testPage.html" class="card_btn">Learn More</a>
+            </div>
+
+            <div class="card" data-category="family night">
+                <div class="image_wrapper">
+                    <img src="../images/movie.jpg" alt="movie theater">
+                    <div class="image_caption">
+                        <span class="photo_credit">Photo: <a href="https://unsplash.com/photos/a-couple-of-people-sitting-in-a-theater-eohetjfVJ2k">LexScope</a></span>
+                    </div>
+                </div>
+                <div class="card_content">
+                    <h3>Movies</h3>
+                    <p>Enjoy a family night out at Taniti's movie theater</p>
+                </div>
+                <a href="testPage.html" class="card_btn">Learn More</a>
+            </div>
+
+            <div class="card" data-category="nature">
+                <div class="image_wrapper">
+                    <img src="../images/fishboat.jpg" alt="Fishing Charter">
+                    <div class="image_caption">
+                        <span class="photo_credit">Photo: <a href="https://unsplash.com/photos/wooden-motor-yacht-docked-at-a-pier-gQyC6mXaAnM">Jonathan Lim</a></span>
+                    </div>
+                </div>
+                <div class="card_content">
+                    <h3>Fishing Charter</h3>
+                    <p>Daily fishing charters around the island</p>
+                </div>
+                <a href="testPage.html" class="card_btn">Learn More</a>
+            </div>
+
+            <div class="card" data-category="nature">
+                <div class="image_wrapper">
+                    <img src="../images/helicopter.jpg" alt="Helicopter Tours">
+                    <div class="image_caption">
+                        <span class="photo_credit">Photo: <a href="https://unsplash.com/photos/a-military-helicopter-flies-over-forested-hills-dSRyjnQ4KDw">Vidar Nordli-Mathisen</a></span>
+                    </div>
+                </div>
+                <div class="card_content">
+                    <h3>Helicopter Tours</h3>
+                    <p>Explore the island of Taniti from a bird's eye view</p>
+                </div>
+                <a href="testPage.html" class="card_btn">Learn More</a>
+            </div>
+
+            <div class="card" data-category="nature">
+                <div class="image_wrapper">
+                    <img src="../images/golf.jpg" alt="Golf Course">
+                    <div class="image_caption">
+                        <span class="photo_credit">Photo: <a href="https://unsplash.com/photos/a-man-hitting-a-golf-ball-with-a-golf-club-C5B3AMsBep8">Peter Drew</a></span>
+                    </div>
+                </div>
+                <div class="card_content">
+                    <h3>Nine-Hole Golf Course</h3>
+                    <p>COMING SOON</p>
+                </div>
+                <a href="testPage.html" class="card_btn">Learn More</a>
+            </div>
+
+        </div>
+    </section>
+    <button id="back_to_top" title="Back to Top">↑</button>
+</body>
+
+<footer>
+        <h4>Taniti Tourism</h4>
+        <ul>
+            <li>Twitter Icon</li>
+            <li>Instagram Icon</li>
+            <li>facebook Icon</li>
+        </ul>
+        <div class="footer_links">
+            <!-- fill required references here -->
+        </div>
+</footer>
+</html>

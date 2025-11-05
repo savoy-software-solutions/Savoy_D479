@@ -3,77 +3,352 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to Taniti Island</title>
-    <link rel="stylesheet" href="styles.css">
-    <script defer src="scripts.js"></script>
+    <title>Taniti Island Tourism</title>
+    <link rel="stylesheet" href="../style.css">
+    <script defer src="../script.js"></script>
 </head>
+
 <body>
-    <header>
-        <!-- Navigation Bar -->
-        <nav class="navbar">
-            <h1>Welcome To Taniti</h1>
-            <ul>
-                <li><a href="thingsToDo.html">Things to do</a></li>
-                <li><a href="placesToStay.html">Place to stay</a></li>
-                <li><a href="aroundTheIsland.html">Getting around</a></li>
-                <li><a href="thingsToKnow.html">Things to know</a></li>
-                <li><a href="dealsOffers.html">Deals & Offers</a></li>
-            </ul>
-        </nav>
+    <!-- HEADER -->
+    <header id="landing_header" class="banner_home" role="banner" aria-label="Site header">
+        <div class="overlay"></div>
+        <img src="../images/landing_header.jpg" alt="Tropical Beach">
+        <div class="header_content">
+            <h1 class="site_title"><a href="index.html">Welcome to Taniti</a></h1>
+
+            <!-- MOBILE TOGGLE MENU -->
+            <button class="mobile_menu_toggle" aria-label="Open Menu" aria-expanded="false">
+                ☰
+            </button>
+
+            <!-- NAVIGATION BAR -->
+            <nav class="navbar" role="navigation" aria-label="Main navigation">
+                <ul class="nav_links">
+                    <li><a href="thingsToDo.html">Things to do</a></li>
+                    <li><a href="placesToStay.html">Place to stay</a></li>
+                    <li><a href="aroundTheIsland.html">Getting around</a></li>
+                    <li><a href="thingsToKnow.html">Things to know</a></li>
+                    <li><a href="dealsOffers.html">Deals &amp; Offers</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="header_banner_caption">
+            <span class="photo_credit">Photo: <a href="https://unsplash.com/photos/aerial-photography-of-boulders-on-body-of-water-07mSKrzKiRw">Chor Tsang</a></span>
+        </div>
     </header>
 
-    <!-- CTA's for things to do on island -->
-    <section>
+    <!-- CTA PREVIEW W/ HORIZONTAL SCROLL -->
+    <section class="cta_container">
         <h2>Where memories are made</h2>
-        <ul>
-            <li>All</li>
-            <li>Food & Drinks</li>
-            <li>Nature</li>
-            <li>Culture</li>
-            <li>Family-Fun</li>
-            <li>Night Life</li>
-        </ul>
+
+        <!-- FILTER MENU -->
+        <div class="filter_bar" role="tablist" aria-label="Filter activities">
+            <button class="filter_btn active" data-category="all" aria-pressed="true">All</button>
+            <button class="filter_btn" data-category="food" aria-pressed="false">Food &amp; Drinks</button>
+            <button class="filter_btn" data-category="nature" aria-pressed="false">Nature</button>
+            <button class="filter_btn" data-category="culture" aria-pressed="false">Culture</button>
+            <button class="filter_btn" data-category="family" aria-pressed="false">Family-Fun</button>
+            <button class="filter_btn" data-category="nightlife" aria-pressed="false">Night Life</button>
+        </div>
+
+        <!-- HORIZONTAL SCROLL PREVIEW BAR (THINGS TO DO) -->
+         <div class="scroll_wrapper" aria-live="polite">
+            <h2>Things to do on your trip</h2>
+            <div class="card_container">
+                <article class="card" data-category="food family">
+                    <div class="image_wrapper">
+                        <img src="../images/local_restaurant_1.jpg" alt="Restaurant">
+                        <div class="image_caption">
+                            <span class="photo_credit">Photo: <a href="https://unsplash.com/photos/a-group-of-people-sitting-at-a-table-on-the-beach-wX1YwLy5yCM">Norbert Braun</a></span>
+                        </div>
+                    </div>
+                        <div class="card_content">
+                            <h3>Local Restaurant</h3>
+                            <p>Whether you are interested in local cuisine, 
+                                native to Taniti, or crave a taste of home, 
+                                Taniti is home to 10 different restaurants.
+                            </p>
+                        </div>
+                    <a class="card_btn" href="thingsToDo.html">Explore More</a>
+                </article>
+
+                <article class="card" data-category="nature">
+                    <div class="image_wrapper">
+                        <img src="../images/volcano.jpg" alt="Volcano">
+                        <div class="image_caption">
+                            <span class="photo_credit">Photo: <a href="https://unsplash.com/photos/gray-snow-cape-mountain-bo5LL9VuHfY"> Andreas Rasmussen</a></span>
+                        </div>
+                    </div>
+                        <div class="card_content">
+                            <h3>Taniti Volcano Tours</h3>
+                            <p>Explore the beauty and might of Taniti's active volcano.
+                                Whether you are looking for a guided tour or take on Taniti's
+                                hiking trail through the Taniti National Park, breath taking
+                                views can be captured by this island's wonder.
+                            </p>
+                        </div>
+                    <a class="card_btn" href="thingsToDo.html">Explore More</a>
+                </article>
+
+                <article class="card" data-category="culture">
+                    <div class="image_wrapper">
+                        <img src="../images/local_town.jpg" alt="Local Town">
+                        <div class="image_caption">
+                            <span class="photo_credit">Photo: <a href="">Jennie Clavel</a></span>
+                        </div>
+                    </div>    
+                        <div class="card_content">
+                            <h3>Local Town Experience</h3>
+                            <p>Spend an entire day walking through the streets of Taniti City.
+                                Take in the unique archhitecture and rich history of Taniti
+                                as you enjoy the local food and art.
+                            </p>
+                        </div>
+                    <a class="card_btn" href="thingsToDo.html">Explore More</a>
+                </article>
+
+                <article class="card" data-category="nightlife">
+                    <div class="image_wrapper">
+                        <img src="../images/night_life.jpg" alt="Night Club">
+                        <div class="image_caption">
+                            <span class="photo_credit">Photo: <a href="https://unsplash.com/photos/two-women-talking-while-holding-drinking-glasses-MxfcoxycH_Y">Michael Discenza</a></span>
+                        </div>
+                    </div>
+                    <div class="card_content">
+                        <h3>Night Club</h3>
+                        <p>The party never stops in Taniti. Enjoy a number of pubs, microbreweries
+                            and dance clubs. Spend the night the Taniti way.
+                        </p>
+                    </div>
+                    <a class='card_btn' href="thingsToDo.html">Explore More</a>
+                </article>
+
+                <article class="card" data-category="family">
+                    <div class="image_wrapper">
+                        <img src="../images/rainforest_tour.jpg" alt="Rainforest Tour">
+                        <div class="image_caption">
+                            <span>Photo: <a href="https://unsplash.com/photos/a-person-walking-on-a-bridge-oENz4rs43es">Sophie Laurent</a></span>
+                        </div>
+                    </div>
+                    <div class="card_content">
+                        <h3>Rainforest Tours</h3>
+                        <p>Explore the jungles of Taniti. By foot or zip-line, Taniti offers guided
+                            tours through Taniti's rainforest. See the natural fruits and the animals that eat them!
+                        </p>
+                    </div>
+                    <a class='card_btn' href="thingsToDo.html">Explore More</a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION SEPARATER BANNER -->
+    <div class="section_divider banner_home">
+        <div class="divider_caption">
+            <span class="photo_credit">Photo: <a href="https://unsplash.com/photos/aerial-photography-of-boulders-on-body-of-water-07mSKrzKiRw">Chor Tsang</a></span>
+        </div>
+    </div>
+
+    <!-- HORIZONTAL SCROLLABLE PREVIEW SECTION (THINGS TO KNOW) -->
+    <div class="scroll_wrapper" aria-live="polite">
+            <h2>Things to know before your trip</h2>
+
         <div class="card_container">
-            <div class="card_description">
-                <!-- name of the card -->
-            </div>
+            
+            <article class="card">
+                <div class="image_wrapper">
+                    <img src="../images/wallet.jpg" alt="Wallet">
+                    <div class="image_caption">
+                        <span class="photo_credit">Photo: <a href="">Oliur</a></span>
+                    </div>
+                </div>
+                <div class="card_content">
+                    <h3>Local Currency</h3>
+                    <p>Taniti uses the US dollar as its national currency.
+                        Many businesses found across the island accept both the 
+                        euro and yen as well. Of course, major credit cards are always
+                        accepted during your stay in Taniti.
+                    </p>
+                    <a class="card_btn" href="thingsToKnow.html">Learn More</a>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="image_wrapper">
+                    <img src="../images/doctor.jpg" alt="Doctor">
+                    <div class="image_caption">
+                        <span class="photo_credit">Photo: <a href="https://unsplash.com/photos/a-woman-holding-a-stethoscope-in-her-right-hand-Z7TAIOQgjWA">Eben Kassaye</a></span>
+                    </div>
+                </div>
+                <div class="card_content">
+                    <h3>Medical</h3>
+                    <p>Taniti is home to Taniti National Hospital, with expertly trained doctors
+                        and a multilingual staff. Many clinics can be found across the island for 
+                        those unforseen accidents.
+                    </p>
+                    <a class="card_btn" href="thingsToKnow.html">Learn More</a>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="image_wrapper">
+                    <img src="../images/conversation.jpg" alt="Conversation">
+                    <div class="image_caption">
+                        <span class="photo_credit">Photo: <a href="https://unsplash.com/photos/two-man-chatting-white-sitting-on-brown-wooden-chair-rTFS5bQrXZk">Juri Gianfrancesco</a></span>
+                    </div>
+                </div>
+                <div class="card_content">
+                    <h3>Spoken Languages</h3>
+                    <p>Much of the youth in Taniti are fluent in English, while 
+                        many of the older generations, especially across the rural
+                        areas of the island speak very little English.
+                    </p>
+                    <a class="card_btn" href="thingsToKnow.html">Learn More</a>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="image_wrapper">
+                    <img src="../images/power_outlet.jpg" alt="Power Outlet">
+                    <div class="image_caption">
+                        <span class="photo_credit">Photo: <a href="https://unsplash.com/photos/white-charger-adapter-on-pink-surface-9FwoNzfdxaU">Hayley Maxwell</a></span>
+                    </div>
+                </div>
+                <div class="card_content">
+                    <h3>Power Outlet</h3>
+                    <p>Power outlets in Taniti are all standardized 120 volt outlets,
+                        similar to those found in the United States.
+                    </p>
+                    <a class="card_btn" href="thingsToKnow.html">Learn More</a>
+                </div>
+            </article>
+        </div>
+    </div>
+
+    <!-- HORIZONTAL SCROLLABLE SECTION (DEALS AND OFFERS) -->
+    <section class="deals_section">
+        <h2>Current Deals</h2>
+
+        <div class="scroll_wrapper">
+            <div class="card_container">
+                <article class="deal_card">
+                    <div class="image_wrapper">
+                        <img src="../images/resort_1.jpg" alt="Resort">
+                        <div class="image_caption">
+                            <span class="photo_credit">Photo: <a href="https://unsplash.com/photos/swimming-pool-near-green-mountain-during-daytime-MjR15QXwGOs">Vic Alcuaz</a></span>
+                        </div>
+                    </div>
+                    <div class="deal_info">
+                        <h3>Luxury Resort Getaway</h3>
+                        <p>Starting at $799</p>
+                        <div class="deal_footer">
+                            <div class="deal_location">Location Name</div>
+                            <a class="deal_btn" href="testPage.html">Book Today!</a>
+                        </div>
+                    </div>
+                </article>
+
+            <article class="deal_card">
+                <div class="image_wrapper">
+                    <img src="../images/resort_2.jpg" alt="Resort">
+                    <div class="image_caption">
+                        <span class="photo_credit">Photo: <a href="https://unsplash.com/photos/a-resort-with-a-pool-surrounded-by-palm-trees-XNjfRIlHTNs">Stevosdisposable</a></span>
+                    </div>
+                </div>
+                <div class="deal_info">
+                    <h3>Luxury Resort Getaway</h3>
+                    <p>Starting at $799</p>
+                    <div class="deal_footer">
+                        <div class="deal_location">Location Name</div>
+                        <a class="deal_btn" href="testPage.html">Book Today!</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="deal_card">
+                <div class="image_wrapper">
+                    <img src="../images/resort_3.jpg" alt="Resort">
+                    <div class="image_caption">
+                        <span class="photo_credit">Photo: <a href="https://unsplash.com/photos/a-silver-car-parked-in-front-of-a-building-lCq-Nj4AH0E">Suryaprakash V</a></span>
+                    </div>
+                </div>
+                <div class="deal_info">
+                    <h3>Luxury Resort Getaway</h3>
+                    <p>Starting at $799</p>
+                    <div class="deal_footer">
+                        <div class="deal_location">Location Name</div>
+                        <a class="deal_btn" href="testPage.html">Book Today!</a>
+                    </div>
+                </div>
+            </article>
         </div>
     </section>
 
-    <!-- CTA's for things to know before visiting -->
-    <section>
-        <h2>Know before you show</h2>
-        <div class="card_container">
-            <div class="card_description">
-                <!-- name of the card -->
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA's for deals and offers -->
-    <section>
-        <h2>Package deals for everyone</h2>
-        <div class="package_container">
-            <!-- insert image here -->
-            <div class="package_info">
-                <h3>Package Name</h3>
-                <p class="package_pricing">Starting at $X.XX</p>
-                <p class="resort_name">Resort Name</p>
-                <!-- insert an icon here -->
-                <button><a href="dealsOffers.html">Book you stay</a></button>
-            </div>
-        </div>
-    </section>
-
-        <!-- frequently asked questions -->
-     <section>
-        <h2>Frequently Asked Questions</h2>
+    <!-- FAQ SECTION -->
+     <section class="faq_section" aria-labelledby="faq_heading">
+        <h2 id="faq_heading">Frequently Asked Questions</h2>
+        
         <div class="faq_container">
-            <!-- drop down action needs to be made for these -->
-            <div class="faq_question"><p>Question Number 1?</p></div>
-            <div class="faw_answer"><p>Answer to Number 1!</p></div>
+            <div class="faq_item">
+                <button class="faq_question">
+                    How do I get to Taniti?
+                    <span class="faq_icon">+</span>
+                </button>
+                <div class="faq_answer">
+                    <p>Most guest of Taniti arrive by air through Taniti's small airport.
+                        Currently, the airport accommodates small jets with future plans of expansion
+                        to accommodate larger aircrafts. 
+                    </p>
+                    <p>Yellow Leaf Bay allows docking of small cruise ships once a week for overnight stays.</p>
+                </div>
+            </div>
+
+            <div class="faq_item">
+                <button class="faq_question">
+                    What is there to do around Taniti?
+                    <span class="faq_icon">+</span>
+                </button>
+                <div class="faq_answer">
+                    <p>Guest of Taniti enjoy the beautiful nature the island offers. Beaches, rainforest, volcanoes and fishing
+                        all provide that once in a lifetime feeling you will never forget.
+                    </p>
+                    <p>If you are looking to experience the rich culture of Taniti, daily trips to Taniti city to
+                        take in the art and archhitecture coupled with nights out at the local dance clubs and breweries
+                        will give you the first hand expereince of life in Taniti.
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq_item">
+                <button class="faq_question">
+                    Is Taniti family-friendly?
+                    <span class="faq_icon">+</span>
+                </button>
+                <div class="faq_answer">
+                    <p>Absolutely! Everything from the beaches to the lush rainforest experiences,
+                        family members of all ages can enjoy every second of Taniti.
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq_item">
+                <button class="faq_question">
+                    Where is Taniti?
+                    <span class="faq_icon">+</span>
+                </button>
+                <div class="faq_answer">
+                    <p>Taniti is found in the Pacific Ocean. This small tropical island is full of
+                        life and culture. From the vibrant streets of Taniti City to the excitement filled tours
+                        through the jungles to the volcano, your days will never be boring.
+                    </p>
+                </div>
+            </div>
         </div>
      </section>
+
+     <!-- BACK TO TOP BUTTON -->
+    <button id="back_to_top" title="Back to Top">↑</button>
+
 </body>
 <footer>
         <h4>Taniti Tourism</h4>
@@ -85,5 +360,5 @@
         <div class="footer_links">
             <!-- fill required references here -->
         </div>
-     </footer>
+</footer>
 </html>
